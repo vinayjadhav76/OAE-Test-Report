@@ -43,6 +43,15 @@ export const ROUTES: SideNavInterface[] = [
         ]
     },
     {
+        path: '/authentication/user',
+        title: 'User',
+        iconType: 'nzIcon',
+        iconTheme: 'outline',
+        icon: 'user',
+        submenu: []
+            
+    },
+    {
         path: '',
         title: 'Apps',
         iconType: 'nzIcon',
