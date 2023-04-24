@@ -17,7 +17,7 @@ import { NzDropDownModule } from 'ng-zorro-antd/dropdown';
         NzInputModule,
         NzButtonModule,
         NzTableModule,
-        NzDropDownModule
+        NzDropDownModule,
     ]
 })
 
