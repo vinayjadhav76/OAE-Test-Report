@@ -1,4 +1,14 @@
 @import url('./assets/lib/hljs/styles/atom-one-light.css');
 @import url('../node_modules/ng-zorro-antd/src/ng-zorro-antd.min.css');
 @import url('../node_modules/@fortawesome/fontawesome-free/css/all.min.css');
-@import './assets/scss/app.scss'
+@import './assets/scss/app.scss';
+
+
+.header {
+    background: #255280;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #3498db, #255280);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #3498db, #255280);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}

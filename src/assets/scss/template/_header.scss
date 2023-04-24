@@ -56,7 +56,7 @@
                 nz-dropdown > a {
                     padding: 5px 15px;
                     font-size: 18px;
-                    color: $body-color;
+                    color: #fff;
                     display: block;
                     @include transition(background-color 0.3s); 
                     border-radius: $border-radius;
@@ -64,16 +64,16 @@
                     &:hover,
                     &:focus,
                     &:active {
-                        color: $brand-primary;
+                        color: #000;
                         background-color: rgba($brand-primary, 0.1);
 
                         .ant-badge {
-                            color: $brand-primary; 
+                            color: #000; 
                         }    
                     }
 
                     .ant-badge {
-                        color: $body-color;
+                        color: #fff;
                         font-size: 18px;
                     }
                 }

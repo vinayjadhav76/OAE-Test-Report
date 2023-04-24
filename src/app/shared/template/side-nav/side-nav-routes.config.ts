@@ -43,14 +43,23 @@ export const ROUTES: SideNavInterface[] = [
         ]
     },
     {
-        path: '/authentication/user',
-        title: 'User',
+        path: '/user-reg',
+        title: 'Register User',
         iconType: 'nzIcon',
         iconTheme: 'outline',
-        icon: 'user',
+        icon: 'solution',
         submenu: []
             
     },
+    {
+        path: '/report-form',
+        title: 'OAE Test Report',
+        iconType: 'nzIcon',
+        iconTheme: 'outline',
+        icon: 'solution',
+        submenu: []
+            
+    },    
     {
         path: '',
         title: 'Apps',

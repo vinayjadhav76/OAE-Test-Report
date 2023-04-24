@@ -17,6 +17,12 @@ import { FullLayoutComponent } from './layouts/full-layout/full-layout.component
 
 import { NgChartjsModule } from 'ng-chartjs';
 import { ThemeConstantService } from './shared/services/theme-constant.service';
+import { ReportFormComponent } from './report-form/report-form.component';
+import { FormsModule , ReactiveFormsModule } from '@angular/forms';
+import { zorroModule } from '../app/zorro.module'
+import { UserRegComponent } from './user-reg/user-reg.component';
+import { AddUserComponent } from './add-user/add-user.component';
+
 
 registerLocaleData(en);
 
@@ -24,7 +30,10 @@ registerLocaleData(en);
     declarations: [
         AppComponent,
         CommonLayoutComponent,
-        FullLayoutComponent
+        FullLayoutComponent,
+        ReportFormComponent,
+        UserRegComponent,
+        AddUserComponent
     ],
     imports: [
         BrowserModule,
@@ -34,6 +43,9 @@ registerLocaleData(en);
         TemplateModule,
         SharedModule,
         NgChartjsModule,
+        FormsModule,
+        ReactiveFormsModule,
+        zorroModule
     ],
     providers: [
         { 
