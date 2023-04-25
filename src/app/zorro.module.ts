@@ -19,7 +19,10 @@ import { NzIconModule } from 'ng-zorro-antd/icon';
         NzButtonModule,
         NzTableModule,
         NzDropDownModule,
+<<<<<<< HEAD
         NzIconModule
+=======
+>>>>>>> 93e5b41df38ba5a4d1632234e4a92311c58946b3
     ]
 })
 
