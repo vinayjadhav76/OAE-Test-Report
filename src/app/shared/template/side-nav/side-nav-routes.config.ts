@@ -43,11 +43,11 @@ export const ROUTES: SideNavInterface[] = [
         ]
     },
     {
-        path: '/user-reg',
-        title: 'Register User',
+        path: '/user/user-grid',
+        title: 'User',
         iconType: 'nzIcon',
         iconTheme: 'outline',
-        icon: 'solution',
+        icon: 'user',
         submenu: []
             
     },

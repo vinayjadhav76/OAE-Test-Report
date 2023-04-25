@@ -1,7 +1,7 @@
 <div class="container ">
     <nz-card>
         <div class="d-flex justify-content-end">
-            <button nz-button nzType="primary" routerLink="/add-user">Add User</button>
+            <button nz-button nzType="primary" routerLink="/user/add-user">Add User</button>
         </div>
     </nz-card>
 </div>
@@ -24,13 +24,13 @@
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let data of nzTable.data">
-                    <td>{{data.id}}</td>
-                    <td>{{ data.name }}</td>
-                    <td>{{ data.email }}</td>
-                    <td>{{ data.UserType }}</td>
+                <tr *ngFor="let user of listOfUser">
+                    <td>{{user.id}}</td>
+                    <td>{{ user.fname }}  {{user.lname}}</td>
+                    <td>{{ user.email }}</td>
+                    <td>{{ user.userType }}</td>
                     <td class="d-flex justify-content-around">
-                        <a href=""><span class="text-primary" nz-icon nzType="edit" nzTheme="outline" style="font-size: 20px;" ></span></a>
+                        <a href="/user/update-user/{{user.id}}"><span class="text-primary" nz-icon nzType="edit" nzTheme="outline" style="font-size: 20px;" ></span></a>
                         <a href=""><span class="text-danger" nz-icon nzType="delete" nzTheme="outline" style="font-size: 20px;"></span></a>
                     </td>
                 </tr>

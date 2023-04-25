@@ -20,8 +20,8 @@ import { ThemeConstantService } from './shared/services/theme-constant.service';
 import { ReportFormComponent } from './report-form/report-form.component';
 import { FormsModule , ReactiveFormsModule } from '@angular/forms';
 import { zorroModule } from '../app/zorro.module'
-import { UserRegComponent } from './user-reg/user-reg.component';
-import { AddUserComponent } from './add-user/add-user.component';
+import { UserModule } from './user/user.module';
+import { HttpClientModule } from '@angular/common/http';
 
 
 registerLocaleData(en);
@@ -32,8 +32,6 @@ registerLocaleData(en);
         CommonLayoutComponent,
         FullLayoutComponent,
         ReportFormComponent,
-        UserRegComponent,
-        AddUserComponent
     ],
     imports: [
         BrowserModule,
@@ -45,7 +43,9 @@ registerLocaleData(en);
         NgChartjsModule,
         FormsModule,
         ReactiveFormsModule,
-        zorroModule
+        zorroModule,
+        UserModule,
+        HttpClientModule
     ],
     providers: [
         { 

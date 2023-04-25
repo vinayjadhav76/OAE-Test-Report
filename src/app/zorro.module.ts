@@ -7,6 +7,7 @@ import { NzInputModule } from 'ng-zorro-antd/input';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzTableModule } from 'ng-zorro-antd/table';
 import { NzDropDownModule } from 'ng-zorro-antd/dropdown';
+import { NzIconModule } from 'ng-zorro-antd/icon';
 
 @NgModule({
     exports: [
@@ -17,7 +18,8 @@ import { NzDropDownModule } from 'ng-zorro-antd/dropdown';
         NzInputModule,
         NzButtonModule,
         NzTableModule,
-        NzDropDownModule
+        NzDropDownModule,
+        NzIconModule
     ]
 })
 

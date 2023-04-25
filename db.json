@@ -1,0 +1,24 @@
+{
+  "user": [
+    {
+      "id": 1,
+      "fname": "Vinay",
+      "lname": "Jadhav",
+      "hospitalname": "Civil hospital",
+      "userType": "Hospital",
+      "mnumber": "9966335522",
+      "email": "civil@gmail.com",
+      "password": "password"
+    },
+    {
+      "fname": "vijay",
+      "lname": "phadtare",
+      "hospitalname": "shivaji hospital",
+      "userType": "Admin",
+      "mnumber": "9988775544",
+      "email": "shivaji@gmail.com",
+      "password": "password",
+      "id": 2
+    }
+  ]
+}

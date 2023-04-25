@@ -1,8 +1,6 @@
 import { Routes } from '@angular/router';
 import { ComponentsComponent } from '../../components/components.component'
 import { ReportFormComponent } from 'src/app/report-form/report-form.component';
-import { UserRegComponent } from 'src/app/user-reg/user-reg.component';
-import { AddUserComponent } from 'src/app/add-user/add-user.component';
 
 export const CommonLayout_ROUTES: Routes = [
 
@@ -89,15 +87,32 @@ export const CommonLayout_ROUTES: Routes = [
         ]
     },
     {
+        path: 'user',
+        data: {
+            title: 'User'
+        },
+        children: [
+            {
+                path: '',
+                redirectTo: '/dashboard',
+                pathMatch: 'full'
+            },
+            {
+                path: '',
+                loadChildren: () => import('../../user/user.module').then(m => m.UserModule)
+            },
+        ]
+    },
+    {
         path: 'report-form',
         component: ReportFormComponent
     },
-    {
-        path: 'user-reg',
-        component: UserRegComponent
-    },
-    {
-        path: 'add-user',
-        component: AddUserComponent
-    },
+    // {
+    //     path: 'user/user-grid',
+    //     component: UserGridComponent
+    // },
+    // {
+    //     path: 'add-user',
+    //     component: AddUserComponent
+    // },
 ];

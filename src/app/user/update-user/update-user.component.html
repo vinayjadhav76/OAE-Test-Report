@@ -1,0 +1,59 @@
+<div class="container">
+    <nz-card>
+        <form nz-form [formGroup]="updateUser" (ngSubmit)="updateUserForm()">
+          <div class="row">
+            <nz-form-item class="col-md-6">
+                <nz-form-label [nzSpan]="7" nzRequired nzFor="note">First Name</nz-form-label>
+                <nz-form-control  nzErrorTip="Please input your first name!">
+                    <input id="fname" type="text" nz-input placeholder="Enter First Name" formControlName="fname" />
+                </nz-form-control>
+            </nz-form-item>            
+            <nz-form-item class="col-md-6">
+                <nz-form-label [nzSpan]="7" nzRequired nzFor="note">Last Name</nz-form-label>
+                <nz-form-control  nzErrorTip="Please input your last name!">
+                    <input id="lname" type="text" nz-input placeholder="Enter Last Name" formControlName="lname" />
+                </nz-form-control>
+            </nz-form-item>
+            <nz-form-item class="col-md-6">
+                <nz-form-label [nzSpan]="7" nzRequired nzFor="note">Hospital Name</nz-form-label>
+                <nz-form-control  nzErrorTip="Please input hospital name!">
+                    <input id="hospitalname" type="text" nz-input placeholder="Enter Hospital Name" formControlName="hospitalname" />
+                </nz-form-control>
+            </nz-form-item>
+            <nz-form-item class="col-md-6">
+                <nz-form-label [nzSpan]="7" nzFor="userType" nzRequired>User Type</nz-form-label>
+                <nz-form-control  nzErrorTip="Please select User Type!">
+                    <nz-select id="userType" formControlName="userType"
+                        nzPlaceHolder="Select User Type">
+                        <nz-option nzValue="Admin" nzLabel="Admin"></nz-option>
+                        <nz-option nzValue="Hospital" nzLabel="Hospial"></nz-option>
+                    </nz-select>
+                </nz-form-control>
+            </nz-form-item>
+            <nz-form-item class="col-md-6">
+                <nz-form-label [nzSpan]="7" nzRequired nzFor="mnumber">Mobile Number</nz-form-label>
+                <nz-form-control  nzErrorTip="Please input your mobile number!">
+                    <input id="mnumber" type="text" nz-input placeholder="Enter Mobile Number" formControlName="mnumber" />
+                </nz-form-control>
+            </nz-form-item>
+            <nz-form-item class="col-md-6">
+                <nz-form-label [nzSpan]="7" nzRequired nzFor="email">Email</nz-form-label>
+                <nz-form-control  nzErrorTip="Please input your email!">
+                    <input id="email" type="mail" nz-input placeholder="Enter Email" formControlName="email" />
+                </nz-form-control>
+            </nz-form-item>
+            <nz-form-item class="col-md-6">
+                <nz-form-label [nzSpan]="7" nzRequired nzFor="password">Password</nz-form-label>
+                <nz-form-control  nzErrorTip="Please input your password!">
+                    <input id="password" type="password" nz-input placeholder="Enter Password" formControlName="password" />
+                </nz-form-control>
+            </nz-form-item>
+            <nz-form-item class="col-md-12 ">
+                <nz-form-control class="align-items-center">
+                    <button nz-button nzType="primary">Submit</button>
+                </nz-form-control>
+            </nz-form-item>
+          </div>
+        </form>
+    </nz-card>
+</div>

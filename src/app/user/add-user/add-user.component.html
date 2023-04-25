@@ -15,6 +15,12 @@
                 </nz-form-control>
             </nz-form-item>
             <nz-form-item class="col-md-6">
+                <nz-form-label [nzSpan]="7" nzRequired nzFor="note">Hospital Name</nz-form-label>
+                <nz-form-control  nzErrorTip="Please input hospital name!">
+                    <input id="hospitalname" type="text" nz-input placeholder="Enter Hospital Name" formControlName="hospitalname" />
+                </nz-form-control>
+            </nz-form-item>
+            <nz-form-item class="col-md-6">
                 <nz-form-label [nzSpan]="7" nzFor="userType" nzRequired>User Type</nz-form-label>
                 <nz-form-control  nzErrorTip="Please select User Type!">
                     <nz-select id="userType" formControlName="userType"
