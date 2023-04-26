@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { UserService } from 'src/app/shared/services/user.service';
 
 @Component({
@@ -18,7 +19,7 @@ export class AddUserComponent implements OnInit {
     password: new FormControl('', [Validators.required])
   })
 
-  constructor( private userservice:UserService ) { }
+  constructor( private userservice:UserService , private router:Router) { }
 
   ngOnInit(): void {
   }
@@ -28,6 +29,8 @@ export class AddUserComponent implements OnInit {
       // console.log('submit', this.validateForm.value);
       this.userservice.addUser(this.validateForm.value).subscribe((res)=>{
         // console.warn(res)
+        this.validateForm.reset()
+        this.router.navigate(['/user/user-grid'])
       })
     } else {
       Object.values(this.validateForm.controls).forEach(control => {

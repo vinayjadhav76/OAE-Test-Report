@@ -10,7 +10,7 @@ export class UserGridComponent implements OnInit {
 
   searchValue = '';
   visible = false;
-  listOfUser: any[] =[
+  listOfUser: any[] = [
     // {
     //   id:1,
     //   name: 'John Brown',
@@ -23,17 +23,14 @@ export class UserGridComponent implements OnInit {
     //   email: 'jack@gmail.com',
     //   UserType: 1
     // }
-    
+
   ]
 
-  constructor( private userservice:UserService ) { }
+  constructor(private userservice: UserService) { }
 
   ngOnInit(): void {
-this.userservice.listUser().subscribe((res:any)=>{
-this.listOfUser = res;
-console.warn(res);
-})
-    
+   
+this.userList();
   }
 
   listOfDisplayData = [...this.listOfUser];
@@ -47,6 +44,24 @@ console.warn(res);
     this.visible = false;
     // this.listOfDisplayData = this.listOfUser.filter((item: DataItem) => item.name.indexOf(this.searchValue) !== -1);
     this.listOfDisplayData = this.listOfUser.filter((item: any) => item.name.indexOf(this.searchValue) !== -1);
+  }
+
+  userList(){
+    this.userservice.listUser().subscribe((res: any) => {
+      this.listOfUser = res;
+      // console.warn(res);
+    })
+  }
+
+  deleteUser(id) {
+    this.userservice.removeUser(id).subscribe((res:any) => { 
+      // console.warn(res);
+      if(res){
+        // alert("User Deleted Successfully")
+        this.userList();
+      }
+      
+    })
   }
 
 }

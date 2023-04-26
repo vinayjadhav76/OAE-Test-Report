@@ -13,10 +13,10 @@
                     <th>Sr No.</th>
                     <th nzCustomFilter>
                         Name
-                        <nz-filter-trigger [(nzVisible)]="visible" [nzActive]="searchValue.length > 0"
+                        <!-- <nz-filter-trigger [(nzVisible)]="visible" [nzActive]="searchValue.length > 0"
                             [nzDropdownMenu]="menu">
                             <span nz-icon nzType="search"></span>
-                        </nz-filter-trigger>
+                        </nz-filter-trigger> -->
                     </th>
                     <th>Email</th>
                     <th>User Type</th>
@@ -31,12 +31,12 @@
                     <td>{{ user.userType }}</td>
                     <td class="d-flex justify-content-around">
                         <a href="/user/update-user/{{user.id}}"><span class="text-primary" nz-icon nzType="edit" nzTheme="outline" style="font-size: 20px;" ></span></a>
-                        <a href=""><span class="text-danger" nz-icon nzType="delete" nzTheme="outline" style="font-size: 20px;"></span></a>
+                        <a  (click)="deleteUser(user.id)"><span class="text-danger" nz-icon nzType="delete" nzTheme="outline" style="font-size: 20px;"></span></a>
                     </td>
                 </tr>
             </tbody>
         </nz-table>
-        <nz-dropdown-menu #menu="nzDropdownMenu">
+        <!-- <nz-dropdown-menu #menu="nzDropdownMenu">
             <div class="ant-table-filter-dropdown">
                 <div class="search-box">
                     <input type="text" nz-input placeholder="Search name" [(ngModel)]="searchValue" />
@@ -45,6 +45,6 @@
                     <button nz-button nzSize="small" (click)="reset()">Reset</button>
                 </div>
             </div>
-        </nz-dropdown-menu>
+        </nz-dropdown-menu> -->
     </nz-card>
 </div>
