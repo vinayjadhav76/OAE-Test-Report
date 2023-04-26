@@ -31,16 +31,6 @@
       "id": 5
     },
     {
-      "fname": "s",
-      "lname": "s",
-      "hospitalname": "s",
-      "userType": "Hospital",
-      "mnumber": "s",
-      "email": "s",
-      "password": "s",
-      "id": 6
-    },
-    {
       "fname": "q",
       "lname": "d",
       "hospitalname": "s",
@@ -49,6 +39,16 @@
       "email": "v",
       "password": "f",
       "id": 7
+    },
+    {
+      "fname": "g",
+      "lname": "g",
+      "hospitalname": "g",
+      "userType": "Hospital",
+      "mnumber": "9988775544",
+      "email": "g",
+      "password": "gpass",
+      "id": 8
     }
   ]
 }

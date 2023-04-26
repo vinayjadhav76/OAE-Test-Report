@@ -1,5 +1,6 @@
 import { Component } from '@angular/core'
-import { FormBuilder, FormGroup,  Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -11,18 +12,23 @@ export class Login1Component {
 
     submitForm(): void {
         for (const i in this.loginForm.controls) {
-            this.loginForm.controls[ i ].markAsDirty();
-            this.loginForm.controls[ i ].updateValueAndValidity();
+            this.loginForm.controls[i].markAsDirty();
+            this.loginForm.controls[i].updateValueAndValidity();
         }
     }
 
-    constructor(private fb: FormBuilder) {
+    constructor(private fb: FormBuilder, private router: Router) {
     }
 
     ngOnInit(): void {
         this.loginForm = this.fb.group({
-            userName: [ null, [ Validators.required ] ],
-            password: [ null, [ Validators.required ] ]
+            userName: [null, []],
+            password: [null, []]
         });
+    }
+
+    login() {
+        
+        this.router.navigate(['/dashboard/default'])
     }
 }    

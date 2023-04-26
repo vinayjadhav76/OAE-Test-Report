@@ -48,7 +48,6 @@ export class UpdateUserComponent implements OnInit {
         this.updateUser.reset();
         this.router.navigate(['/user/user-grid'])
         // console.warn(this.updateUser.value);
-
       })
     } else {
       Object.values(this.updateUser.controls).forEach(control => {
