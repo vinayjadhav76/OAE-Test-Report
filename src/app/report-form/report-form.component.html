@@ -2,12 +2,15 @@
     <nz-card>
         <form nz-form [formGroup]="report" (ngSubmit)="submitForm()">
             <div class="row">
-                <nz-form-item class="col-md-12">
-                    <nz-form-label [nzSpan]="7" nzRequired nzFor="note">Hospital Name</nz-form-label>
+                <nz-form-item class="col-md-6">
+                    <nz-form-label [nzSpan]="14" nzRequired nzFor="note">Hospital Name</nz-form-label>
+                    <br>
                     <nz-form-control>
                         <input id="hospitalname" type="text" nz-input readonly formControlName="hospitalname" />
                     </nz-form-control>
                 </nz-form-item>
+                </div>
+                <div class="row">
                 <nz-form-item class="col-md-6">
                     <nz-form-label [nzSpan]="7" nzRequired nzFor="note">Father's Name</nz-form-label>
                     <nz-form-control nzErrorTip="Please input father's name!">

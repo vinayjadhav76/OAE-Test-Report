@@ -45,7 +45,8 @@ registerLocaleData(en);
         ReactiveFormsModule,
         zorroModule,
         UserModule,
-        HttpClientModule
+        HttpClientModule,
+        
     ],
     providers: [
         { 

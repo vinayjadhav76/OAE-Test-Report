@@ -28,12 +28,12 @@
                     <div class="col-md-8 col-lg-7 col-xl-6 mx-auto">
                         <h2>Sign In</h2>
                         <p class="m-b-30">Enter your credential to get access</p>
-                        <form nz-form [formGroup]="loginForm" nzLayout="vertical" class="login-form" (ngSubmit)="submitForm()">
+                        <form nz-form [formGroup]="loginForm" nzLayout="vertical" class="login-form" (ngSubmit)="submitForm(loginForm.value)">
                             <nz-form-item>
                                 <nz-form-label nzRequired nzFor="userName">Username</nz-form-label>
                                 <nz-form-control nzErrorTip="Please input your username!">
                                     <nz-input-group [nzPrefix]="prefixUser">
-                                        <input type="text" nz-input formControlName="userName" placeholder="Username">
+                                        <input type="email" nz-input formControlName="email" placeholder="Email">
                                     </nz-input-group>
                                 </nz-form-control>
                             </nz-form-item>
@@ -50,7 +50,7 @@
                                 <nz-form-control>
                                     <div class="d-flex align-items-center justify-content-between">
                                         <span class="font-size-13 text-muted">Don't have an account? <a class="small" [routerLink]="['/authentication/sign-up-1']"> Signup</a></span>
-                                        <button nz-button class="login-form-button" (click)="login()" [nzType]="'primary'">Sign In</button>
+                                        <button nz-button class="login-form-button" [nzType]="'primary'">Sign In</button>
                                     </div>
                                 </nz-form-control>
                             </nz-form-item>

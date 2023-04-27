@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -8,7 +9,7 @@ export class UserService {
 
   user_url = "http://localhost:3000/user";
 
-  constructor(private _http: HttpClient) { }
+  constructor(private _http: HttpClient, private router: Router ) { }
 
   addUser(data: any) {
     return this._http.post(this.user_url, data);
@@ -27,7 +28,20 @@ export class UserService {
     // return this._http.delete(this.user_url + "/" + id);
   }
 
-  editUser(id,data){
-return this._http.put(`${this.user_url}/${id}` , data)
+  editUser(id, data) {
+    return this._http.put(`${this.user_url}/${id}`, data)
+  }
+
+  loginUser(data:any) {
+    return this._http.get(`http://localhost:3000/user?email=${data.email}&&password=${data.password}`, { observe: 'response' }).subscribe((res:any) => {
+      // console.warn(res);
+      if (res && res.body && res.body.length) {
+        alert("login Successful")
+        this.router.navigate(['/dashboard/default'])
+        localStorage.setItem("User", JSON.stringify(res.body))
+      } else {
+        alert("Something Went Wrong")
+      }
+    })
   }
 }

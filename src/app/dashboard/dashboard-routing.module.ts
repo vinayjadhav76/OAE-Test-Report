@@ -5,11 +5,13 @@ import { DefaultDashboardComponent } from './default/default-dashboard.component
 import { EcommerceDashboardComponent } from './e-commerce/e-commerce-dashboard.component';
 import { ProjectsDashboardComponent } from './projects/projects-dashboard.component';
 import { CrmDashboardComponent } from './crm/crm-dashboard.component';
+// import { AuthGuard } from '../shared/guard/auth.guard';
 
 const routes: Routes = [
     {
         path: 'default',
         component: DefaultDashboardComponent,
+        // canActivate:[AuthGuard],
         data: {
             title: 'Dashboard ',
             headerDisplay: "none"

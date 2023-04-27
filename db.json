@@ -29,26 +29,6 @@
       "email": "vijay@gmail.com",
       "password": "password",
       "id": 5
-    },
-    {
-      "fname": "q",
-      "lname": "d",
-      "hospitalname": "s",
-      "userType": "Admin",
-      "mnumber": "1",
-      "email": "v",
-      "password": "f",
-      "id": 7
-    },
-    {
-      "fname": "g",
-      "lname": "g",
-      "hospitalname": "g",
-      "userType": "Hospital",
-      "mnumber": "9988775544",
-      "email": "g",
-      "password": "gpass",
-      "id": 8
     }
   ]
 }

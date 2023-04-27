@@ -1,5 +1,6 @@
 import { Component } from '@angular/core'
 import { ThemeConstantService } from '../../shared/services/theme-constant.service';
+import { Router } from '@angular/router';
 
 @Component({
     templateUrl: './default-dashboard.component.html'
@@ -19,16 +20,33 @@ export class DefaultDashboardComponent {
 
     taskListIndex: number = 0;
 
-    constructor( private colorConfig:ThemeConstantService ) {}
+    constructor(private colorConfig: ThemeConstantService, private router: Router) { }
+
+    ngOnInit() {
+        // this.router.events.subscribe((val: any) => {
+            // console.warn(val);
+            // if(val.url){
+// if(localStorage.getItem('user')){
+//     let userData = localStorage.getItem('user')
+    // let userInfo = userData && JSON.parse(userData)
+    // console.warn("userData:" , JSON.parse(userData) );
+    
+// }
+            // }
+            // console.warn(val.url);
+            
+        // })
+
+    }
 
     revenueChartFormat: string = 'revenueMonth';
 
-    revenueChartData: Array<any> = [{ 
+    revenueChartData: Array<any> = [{
         data: [30, 60, 40, 50, 40, 55, 85, 65, 75, 50, 70],
-        label: 'Series A' 
+        label: 'Series A'
     }];
     currentrevenueChartLabelsIdx = 1;
-    revenueChartLabels:Array<any> = ["16th", "17th", "18th", "19th", "20th", "21th", "22th", "23th", "24th", "25th", "26th"];
+    revenueChartLabels: Array<any> = ["16th", "17th", "18th", "19th", "20th", "21th", "22th", "23th", "24th", "25th", "26th"];
     revenueChartOptions: any = {
         maintainAspectRatio: false,
         responsive: true,
@@ -40,7 +58,7 @@ export class DefaultDashboardComponent {
             mode: 'index'
         },
         scales: {
-            xAxes: [{ 
+            xAxes: [{
                 gridLines: [{
                     display: false,
                 }],
@@ -57,21 +75,21 @@ export class DefaultDashboardComponent {
                     drawTicks: false,
                     borderDash: [3, 4],
                     zeroLineWidth: 1,
-                    zeroLineBorderDash: [3, 4]  
+                    zeroLineBorderDash: [3, 4]
                 },
                 ticks: {
                     display: true,
-                    max: 100,                            
+                    max: 100,
                     stepSize: 20,
                     fontColor: this.themeColors.grayLight,
                     fontSize: 13,
                     padding: 10
-                }  
+                }
             }],
         }
     };
     revenueChartColors: Array<any> = [
-        { 
+        {
             backgroundColor: this.themeColors.transparent,
             borderColor: this.blue,
             pointBackgroundColor: this.blue,
@@ -84,9 +102,9 @@ export class DefaultDashboardComponent {
 
     customersChartLabels: string[] = ['New', 'Returning', 'Others'];
     customersChartData: number[] = [350, 450, 100];
-    customersChartColors: Array<any> =  [{ 
+    customersChartColors: Array<any> = [{
         backgroundColor: [this.cyan, this.purple, this.gold],
-        pointBackgroundColor : [this.cyan, this.purple, this.gold]
+        pointBackgroundColor: [this.cyan, this.purple, this.gold]
     }];
     customersChartOptions: any = {
         cutoutPercentage: 75,
@@ -130,7 +148,7 @@ export class DefaultDashboardComponent {
                     zeroLineWidth: 1,
                     zeroLineBorderDash: [3, 4]
                 },
-                ticks: {                           
+                ticks: {
                     stepSize: 40,
                     display: true,
                     beginAtZero: true,
@@ -144,23 +162,23 @@ export class DefaultDashboardComponent {
     avgProfitChartType = 'bar';
     avgProfitChartLegend = false;
     avgProfitChartColors: Array<any> = [
-        { 
+        {
             backgroundColor: this.blue,
             borderWidth: 0
         },
-        { 
+        {
             backgroundColor: this.blueLight,
             borderWidth: 0
         }
     ];
     avgProfitChartData: any[] = [
-        { 
+        {
             data: [38, 38, 30, 19, 56, 55, 31],
             label: 'Series A',
             categoryPercentage: 0.35,
             barPercentage: 0.3,
         },
-        { 
+        {
             data: [55, 69, 90, 81, 86, 27, 77],
             label: 'Series B',
             categoryPercentage: 0.35,
@@ -204,7 +222,7 @@ export class DefaultDashboardComponent {
             sales: 60,
             stock: 76,
         }
-    ]    
+    ]
 
     fileList = [
         {
@@ -294,7 +312,7 @@ export class DefaultDashboardComponent {
             target: "this project",
             actionType: "created"
         }
-    ]    
+    ]
 
     taskListToday = [
         {
@@ -323,7 +341,7 @@ export class DefaultDashboardComponent {
             checked: false
         }
     ];
-    
+
     taskListWeek = [
         {
             title: "Verify connectivity",
