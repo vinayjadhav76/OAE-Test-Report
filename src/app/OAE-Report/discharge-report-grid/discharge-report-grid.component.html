@@ -1,0 +1,50 @@
+<div class="container ">
+    <nz-card>
+        <div class="d-flex justify-content-end">
+            <button nz-button nzType="primary" routerLink="/OAE-Report/discharge-add">Add New</button>
+        </div>
+    </nz-card>
+</div>
+<div class="container">
+    <nz-card>
+        <nz-table #nzTable  nzTableLayout="fixed">
+            <thead>
+                <tr>
+                    <th>Sr No.</th>
+                    <th nzCustomFilter>
+                        Name
+                        <!-- <nz-filter-trigger [(nzVisible)]="visible" [nzActive]="searchValue.length > 0"
+                            [nzDropdownMenu]="menu">
+                            <span nz-icon nzType="search"></span>
+                        </nz-filter-trigger> -->
+                    </th>
+                    <th>Email</th>
+                    <th>User Type</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="d-flex justify-content-around">
+                        <a href=""><span class="text-primary" nz-icon nzType="edit" nzTheme="outline" style="font-size: 20px;" ></span></a>
+                        <a  (click)="deleteUser()"><span class="text-danger" nz-icon nzType="delete" nzTheme="outline" style="font-size: 20px;"></span></a>
+                    </td>
+                </tr>
+            </tbody>
+        </nz-table>
+        <!-- <nz-dropdown-menu #menu="nzDropdownMenu">
+            <div class="ant-table-filter-dropdown">
+                <div class="search-box">
+                    <input type="text" nz-input placeholder="Search name" [(ngModel)]="searchValue" />
+                    <button nz-button nzSize="small" nzType="primary" (click)="search()"
+                        class="search-button">Search</button>
+                    <button nz-button nzSize="small" (click)="reset()">Reset</button>
+                </div>
+            </div>
+        </nz-dropdown-menu> -->
+    </nz-card>
+</div>

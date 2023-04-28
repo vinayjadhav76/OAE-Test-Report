@@ -17,11 +17,16 @@ import { FullLayoutComponent } from './layouts/full-layout/full-layout.component
 
 import { NgChartjsModule } from 'ng-chartjs';
 import { ThemeConstantService } from './shared/services/theme-constant.service';
-import { ReportFormComponent } from './report-form/report-form.component';
+import { ReportFormComponent } from './OAE-Report/report-form/report-form.component';
 import { FormsModule , ReactiveFormsModule } from '@angular/forms';
 import { zorroModule } from '../app/zorro.module'
 import { UserModule } from './user/user.module';
 import { HttpClientModule } from '@angular/common/http';
+import { PassReportGridComponent } from './OAE-Report/pass-report-grid/pass-report-grid.component';
+import { RefferReportGridComponent } from './OAE-Report/reffer-report-grid/reffer-report-grid.component';
+import { FortyEightReportGridComponent } from './OAE-Report/forty-eight-report-grid/forty-eight-report-grid.component';
+import { DischargeReportGridComponent } from './OAE-Report/discharge-report-grid/discharge-report-grid.component';
+import { FiftysixReportGridComponent } from './OAE-Report/fiftysix-report-grid/fiftysix-report-grid.component';
 
 
 registerLocaleData(en);
@@ -32,6 +37,11 @@ registerLocaleData(en);
         CommonLayoutComponent,
         FullLayoutComponent,
         ReportFormComponent,
+        PassReportGridComponent,
+        RefferReportGridComponent,
+        FortyEightReportGridComponent,
+        DischargeReportGridComponent,
+        FiftysixReportGridComponent
     ],
     imports: [
         BrowserModule,

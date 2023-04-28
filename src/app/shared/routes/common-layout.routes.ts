@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router';
 import { ComponentsComponent } from '../../components/components.component'
-import { ReportFormComponent } from 'src/app/report-form/report-form.component';
+import { ReportFormComponent } from 'src/app/OAE-Report/report-form/report-form.component';
 
 export const CommonLayout_ROUTES: Routes = [
 
@@ -104,9 +104,26 @@ export const CommonLayout_ROUTES: Routes = [
         ]
     },
     {
-        path: 'report-form',
-        component: ReportFormComponent
+        path: 'OAE-Report',
+        data: {
+            title: 'OAE-Report'
+        },
+        children: [
+            {
+                path: '',
+                redirectTo: '/dashboard',
+                pathMatch: 'full'
+            },
+            {
+                path: '',
+                loadChildren: () => import('../../OAE-Report/oae-report.module').then(m=>m.OAEReportModule)
+            },
+        ]
     },
+    // {
+    //     path: 'report-form',
+    //     component: ReportFormComponent
+    // },
     // {
     //     path: 'user/user-grid',
     //     component: UserGridComponent

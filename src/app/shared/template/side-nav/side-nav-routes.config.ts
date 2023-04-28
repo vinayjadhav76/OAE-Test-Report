@@ -2,20 +2,20 @@ import { SideNavInterface } from '../../interfaces/side-nav.type';
 
 export const ROUTES: SideNavInterface[] = [
     {
-        path: '',
+        path: '/dashboard/default',
         title: 'Dashboard',
         iconType: 'nzIcon',
         iconTheme: 'outline',
         icon: 'dashboard',
         submenu: [
-            {
-                path: '/dashboard/default',
-                title: 'Default',
-                iconType: '',
-                icon: '',
-                iconTheme: '',
-                submenu: []
-            },
+            // {
+            //     path: '/dashboard/default',
+            //     title: 'Default',
+            //     iconType: '',
+            //     icon: '',
+            //     iconTheme: '',
+            //     submenu: []
+            // },
             // {
             //     path: '/dashboard/crm',
             //     title: 'CRM',
@@ -52,12 +52,67 @@ export const ROUTES: SideNavInterface[] = [
             
     },
     {
-        path: '/report-form',
+        path: '',
         title: 'OAE Test Report',
         iconType: 'nzIcon',
         iconTheme: 'outline',
         icon: 'solution',
-        submenu: []
+        submenu: [
+            {
+                path: '/OAE-Report/OAE-form',
+                title: 'OAE Form',
+                iconType: 'nzIcon',
+                iconTheme: 'outline',
+                icon: 'user',
+                submenu: []
+                    
+            },
+            {
+                path: '/OAE-Report/pass-grid',
+                title: 'Pass Report',
+                iconType: 'nzIcon',
+                iconTheme: 'outline',
+                icon: 'user',
+                submenu: []
+                    
+            },
+            {
+                path: '/OAE-Report/reffer-grid',
+                title: 'Reffer Report',
+                iconType: 'nzIcon',
+                iconTheme: 'outline',
+                icon: 'user',
+                submenu: []
+                    
+            },
+            {
+                path: '/OAE-Report/48-grid',
+                title: '48 Hours Report',
+                iconType: 'nzIcon',
+                iconTheme: 'outline',
+                icon: 'user',
+                submenu: []
+                    
+            },
+            {
+                path: '/OAE-Report/discharge-grid',
+                title: 'Discharge Report',
+                iconType: 'nzIcon',
+                iconTheme: 'outline',
+                icon: 'user',
+                submenu: []
+                    
+            },
+            {
+                path: '/OAE-Report/56-week-grid',
+                title: '56 Week Report',
+                iconType: 'nzIcon',
+                iconTheme: 'outline',
+                icon: 'user',
+                submenu: []
+                    
+            },
+        ]
             
     },    
     // {
