@@ -61,4 +61,17 @@
             </ul>
         </li>
     </ul>
+
+    <ul *ngIf= "menuType === 'hospital'">
+        <li>home</li>
+        <!-- <li>Admin</li> -->
+        <li>hospital</li>
+    </ul>
+    <ul *ngIf="menuType === ' admin'">
+        <li>home</li>
+        <li>Admin</li>
+        <li>hospital</li>
+    </ul>
+    
 </perfect-scrollbar>    
+

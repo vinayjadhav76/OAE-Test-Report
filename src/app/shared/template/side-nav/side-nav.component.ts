@@ -7,16 +7,16 @@ import { ThemeConstantService } from '../../services/theme-constant.service';
     templateUrl: './side-nav.component.html'
 })
 
-export class SideNavComponent{
+export class SideNavComponent {
 
     public menuItems: any[]
-    isFolded : boolean;
-    isSideNavDark : boolean;
-    isExpand : boolean;
+    isFolded: boolean;
+    isSideNavDark: boolean;
+    isExpand: boolean;
     userType: any;
-    menuType: string;
+    menuType: string = "admin";
 
-    constructor( private themeService: ThemeConstantService) {}
+    constructor(private themeService: ThemeConstantService) { }
 
     ngOnInit(): void {
         this.menuItems = ROUTES.filter(menuItem => menuItem);
@@ -25,16 +25,18 @@ export class SideNavComponent{
         this.themeService.isSideNavDarkChanges.subscribe(isDark => this.isSideNavDark = isDark);
 
 
-            let userData = localStorage.getItem('User');
-            let userInfo = userData && JSON.parse(userData)[0];
-            this.userType = userInfo.userType;
-            console.warn(this.userType);
-            
-            // if (this.userType == 'Admin') {
-            //     this.menuType = 'Admin'
-            // }else{
-            //     this.menuType = 'Hospital'
-            // }
+        let userData = localStorage.getItem('User');
+        let userInfo = userData && JSON.parse(userData)[0];
+        this.userType = userInfo.userType;
+        console.warn(this.userType);
+
+        // this.menuType = this.userType
+if(this.userType == 2){
+    this.menuType  = "hospital"
+    console.warn(this.menuType);
+    
+}
+
     }
 
     closeMobileMenu(): void {
