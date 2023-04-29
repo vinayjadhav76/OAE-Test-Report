@@ -36,9 +36,9 @@ export class UserService {
     return this._http.get(`http://localhost:3000/user?email=${data.email}&&password=${data.password}`, { observe: 'response' }).subscribe((res:any) => {
       // console.warn(res);
       if (res && res.body && res.body.length) {
-        alert("login Successful")
-        this.router.navigate(['/dashboard/default'])
-        localStorage.setItem("User", JSON.stringify(res.body))
+        alert("login Successful");
+        localStorage.setItem("User", JSON.stringify(res.body));
+        this.router.navigate(['/dashboard/default']);
       } else {
         alert("Something Went Wrong")
       }

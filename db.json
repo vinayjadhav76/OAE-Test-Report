@@ -29,6 +29,16 @@
       "email": "vijay@gmail.com",
       "password": "password",
       "id": 5
+    },
+    {
+      "fname": "harsh",
+      "lname": "more",
+      "hospitalname": "siddhivinayak",
+      "userType": "2",
+      "mnumber": "5566889977",
+      "email": "harsh@gmail.com",
+      "password": "password",
+      "id": 6
     }
   ]
 }

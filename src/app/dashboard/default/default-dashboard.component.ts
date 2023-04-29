@@ -8,6 +8,9 @@ import { Router } from '@angular/router';
 
 export class DefaultDashboardComponent {
 
+    userType: any = '';
+    menuType:any= 'Admin';
+
     themeColors = this.colorConfig.get().colors;
     blue = this.themeColors.blue;
     blueLight = this.themeColors.blueLight;
@@ -24,20 +27,27 @@ export class DefaultDashboardComponent {
 
     ngOnInit() {
         // this.router.events.subscribe((val: any) => {
-            // console.warn(val);
-            // if(val.url){
-// if(localStorage.getItem('user')){
-//     let userData = localStorage.getItem('user')
-    // let userInfo = userData && JSON.parse(userData)
-    // console.warn("userData:" , JSON.parse(userData) );
-    
-// }
-            // }
-            // console.warn(val.url);
-            
-        // })
+        // console.warn(val);
+        // if(val.url){
+        // if (localStorage.getItem('user') && val.url.includes('seller')) {
+        let userData = localStorage.getItem('User');
+        let userInfo = userData && JSON.parse(userData)[0];
+        // console.warn("userData:", JSON.parse(userData));
+        this.userType = userInfo.userType;
+        // console.warn(this.userType);
+        if (this.userType === 'Admin') {
+            this.menuType = 'Admin'
+        }else{
+            this.menuType = 'Hospital'
+        }
 
     }
+    // }
+    // console.warn(val.url);
+
+    // })
+
+    // }
 
     revenueChartFormat: string = 'revenueMonth';
 

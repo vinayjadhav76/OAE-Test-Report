@@ -13,6 +13,8 @@ export class SideNavComponent{
     isFolded : boolean;
     isSideNavDark : boolean;
     isExpand : boolean;
+    userType: any;
+    menuType: string;
 
     constructor( private themeService: ThemeConstantService) {}
 
@@ -21,6 +23,18 @@ export class SideNavComponent{
         this.themeService.isMenuFoldedChanges.subscribe(isFolded => this.isFolded = isFolded);
         this.themeService.isExpandChanges.subscribe(isExpand => this.isExpand = isExpand);
         this.themeService.isSideNavDarkChanges.subscribe(isDark => this.isSideNavDark = isDark);
+
+
+            let userData = localStorage.getItem('User');
+            let userInfo = userData && JSON.parse(userData)[0];
+            this.userType = userInfo.userType;
+            console.warn(this.userType);
+            
+            // if (this.userType == 'Admin') {
+            //     this.menuType = 'Admin'
+            // }else{
+            //     this.menuType = 'Hospital'
+            // }
     }
 
     closeMobileMenu(): void {
