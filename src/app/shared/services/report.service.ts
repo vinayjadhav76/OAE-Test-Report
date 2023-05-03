@@ -17,4 +17,10 @@ reportUrl="http://localhost:3000/report";
   listReport(){
     return this._http.get("http://localhost:3000/report?satus=Pass")
   }
+
+  listRefferReport(){
+    return this._http.get("http://localhost:3000/report?satus=Reffer")
+  }
+
+
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ReportService } from 'src/app/shared/services/report.service';
 
 @Component({
   selector: 'app-reffer-report-grid',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RefferReportGridComponent implements OnInit {
 
-  constructor() { }
+refferList:[]=[]
+
+  constructor( private reportservice:ReportService ) { }
 
   ngOnInit(): void {
+this.reportservice.listRefferReport().subscribe((res:any)=>{
+this.refferList = res
+})
+
   }
 
 }

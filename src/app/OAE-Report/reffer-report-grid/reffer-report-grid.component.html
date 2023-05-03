@@ -18,21 +18,29 @@
                             <span nz-icon nzType="search"></span>
                         </nz-filter-trigger> -->
                     </th>
-                    <th>Email</th>
-                    <th>User Type</th>
-                    <th>Action</th>
+                    <th>Father Contact</th>
+                    <th>Baby Birth Date</th>
+                    <th>Status</th>
+                    <th>Baby Gender</th>
+                    <th>Hospital</th>
+                    <th>Test Date</th>
+                    <!-- <th>Action</th> -->
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="">
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td class="d-flex justify-content-around">
+                <tr *ngFor="let refferreport of refferList">
+                    <td>{{refferreport.id}}</td>
+                    <td>{{refferreport.fathername}} {{refferreport.lastname}}</td>
+                    <td>{{refferreport.fathermno}}</td>
+                    <td>{{refferreport.bbdate}}</td>
+                    <td>{{refferreport.satus}}</td>
+                    <td>{{refferreport.bgender}}</td>
+                    <td>{{refferreport.hospital}}</td>
+                    <td>{{refferreport.testdate}}</td>
+                    <!-- <td class="d-flex justify-content-around">
                         <a href=""><span class="text-primary" nz-icon nzType="edit" nzTheme="outline" style="font-size: 20px;" ></span></a>
                         <a  (click)="deleteUser()"><span class="text-danger" nz-icon nzType="delete" nzTheme="outline" style="font-size: 20px;"></span></a>
-                    </td>
+                    </td> -->
                 </tr>
             </tbody>
         </nz-table>
