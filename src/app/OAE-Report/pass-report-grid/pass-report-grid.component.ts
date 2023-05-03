@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ReportService } from 'src/app/shared/services/report.service';
 
 @Component({
   selector: 'app-pass-report-grid',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PassReportGridComponent implements OnInit {
 
-  constructor() { }
+passReports:[]=[];
+
+  constructor( private reportservice:ReportService ) { }
 
   ngOnInit(): void {
+    this.reportservice.listReport().subscribe((res:any)=>{
+// console.warn(res);
+this.passReports = res;
+    })
   }
 
 }

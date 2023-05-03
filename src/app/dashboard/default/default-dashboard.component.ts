@@ -40,7 +40,7 @@ export class DefaultDashboardComponent {
         }else{
             this.menuType = 'Hospital'
         }
-
+        
     }
     // }
     // console.warn(val.url);

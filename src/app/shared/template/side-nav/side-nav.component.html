@@ -19,10 +19,10 @@
                 <i *ngIf="item.iconType == 'nzIcon'" nz-icon [nzType]="item.icon" [theme]="item.iconTheme"></i>
                 <i *ngIf="item.iconType == 'fontawesome'" class="m-r-10" [ngClass]="[item.iconTheme , item.icon]"></i>
                 <span>{{item.title}}</span>
-            </a> -->
+            </a>  -->
 
-            <!-- Second Level -->
-            <!-- <ul class="ant-menu ant-menu-inline ant-menu-sub dropdown-menu" *ngIf="item.submenu.length > 0">
+<!-- Second Level -->
+<!-- <ul class="ant-menu ant-menu-inline ant-menu-sub dropdown-menu" *ngIf="item.submenu.length > 0">
                 <li [ngClass]="subItem.submenu.length > 0?'ant-menu-submenu ant-menu-submenu-inline':'ant-menu-item'" 
                     *ngFor="let subItem of item.submenu" 
                     [routerLinkActive]="subItem.submenu.length > 0 ? 'ant-menu-submenu-open' : 'ant-menu-item-selected'"
@@ -37,10 +37,10 @@
                         <i *ngIf="subItem.iconType == 'nzIcon'" nz-icon [nzType]="subItem.icon" [theme]="subItem.iconTheme"></i>
                         <i *ngIf="subItem.iconType == 'fontawesome'" class="m-r-10" [ngClass]="[subItem.iconTheme , subItem.icon]"></i>
                         <span>{{subItem.title}}</span>
-                    </a>
- -->
-                    <!-- Third Level -->
-                    <!-- <ul class="ant-menu ant-menu-inline ant-menu-sub dropdown-menu" *ngIf="subItem.submenu.length > 0">
+                    </a> -->
+
+<!-- Third Level -->
+<!-- <ul class="ant-menu ant-menu-inline ant-menu-sub dropdown-menu" *ngIf="subItem.submenu.length > 0">
                         <li [ngClass]="subItem.submenu.length > 0?'ant-menu-submenu ant-menu-submenu-inline':'ant-menu-item'" 
                             *ngFor="let subItem of subItem.submenu" routerLinkActive="ant-menu-item-selected" 
                             [routerLinkActiveOptions]="{exact: true}">
@@ -60,84 +60,119 @@
                 </li>
             </ul>
         </li>
-    </ul>
-
-    <ul *ngIf= "menuType === 'hospital'">
-        <li>home</li> -->
-        <!-- <li>hospital</li>
-    </ul>
-    <ul *ngIf="menuType === ' admin'">
+    </ul> -->
+<!-- <ul *ngIf="menuType === 'admin'">
         <li>home</li>
         <li>Admin</li>
         <li>hospital</li>
+    </ul>
+    <ul *ngIf= "menuType === 'hospital'">
+        <li>home</li> 
+         <li>hospital</li>
     </ul> -->
-    
+
+
 <!-- </perfect-scrollbar>     -->
 
-<perfect-scrollbar class="side-nav" sideNav>
-    <ul class="ant-menu ant-menu-root ant-menu-inline side-nav-menu" 
-        [ngClass]="{
-            'ant-menu-inline-collapsed': isFolded,
-            'ant-menu-dark' : isSideNavDark
-        }"
-    >
-        <li [ngClass]="item.submenu.length > 0?'ant-menu-submenu ant-menu-submenu-inline':'ant-menu-item'"
-            *ngFor="let item of menuItems"
-            [routerLinkActive]="item.submenu.length > 0 ? 'ant-menu-submenu-open' : 'ant-menu-item-selected'"
-            [routerLinkActiveOptions]="{exact: true}">
-            <a href="javascript:void(0);" class="ant-menu-submenu-title" *ngIf="item.submenu.length > 0">
-                <i *ngIf="item.iconType == 'nzIcon'" nz-icon [nzType]="item.icon" [theme]="item.iconTheme"></i>
-                <i *ngIf="item.iconType == 'fontawesome'" class="m-r-10" [ngClass]="[item.iconTheme , item.icon]"></i>
-                <span>{{item.title}}</span>
-                <i class="ant-menu-submenu-arrow"></i>
-            </a>
-            <a [routerLink]="item.path" (click)="closeMobileMenu()" *ngIf="item.submenu.length === 0">
-                <i *ngIf="item.iconType == 'nzIcon'" nz-icon [nzType]="item.icon" [theme]="item.iconTheme"></i>
-                <i *ngIf="item.iconType == 'fontawesome'" class="m-r-10" [ngClass]="[item.iconTheme , item.icon]"></i>
-                <span>{{item.title}}</span>
-            </a>
 
-            <!-- Second Level -->
-            <ul class="ant-menu ant-menu-inline ant-menu-sub dropdown-menu" *ngIf="item.submenu.length > 0">
-                <li [ngClass]="subItem.submenu.length > 0?'ant-menu-submenu ant-menu-submenu-inline':'ant-menu-item'" 
-                    *ngFor="let subItem of item.submenu" 
-                    [routerLinkActive]="subItem.submenu.length > 0 ? 'ant-menu-submenu-open' : 'ant-menu-item-selected'"
-                    [routerLinkActiveOptions]="{exact: true}">
-                    <a href="javascript:void(0);" class="ant-menu-submenu-title p-l-50" *ngIf="subItem.submenu.length > 0">
-                        <i *ngIf="subItem.iconType == 'nzIcon'" nz-icon [nzType]="subItem.icon" [theme]="subItem.iconTheme"></i>
-                        <i *ngIf="subItem.iconType == 'fontawesome'" class="m-r-10" [ngClass]="[subItem.iconTheme , subItem.icon]"></i>
-                        <span>{{subItem.title}}</span>
-                        <i class="ant-menu-submenu-arrow"></i>
-                    </a>
-                    <a [routerLink]="subItem.path" (click)="closeMobileMenu()" class="p-l-30" *ngIf="subItem.submenu.length === 0">
-                        <i *ngIf="subItem.iconType == 'nzIcon'" nz-icon [nzType]="subItem.icon" [theme]="subItem.iconTheme"></i>
-                        <i *ngIf="subItem.iconType == 'fontawesome'" class="m-r-10" [ngClass]="[subItem.iconTheme , subItem.icon]"></i>
-                        <span>{{subItem.title}}</span>
-                    </a>
+<perfect-scrollbar>
+    <nz-layout class="side-nav" sideNav style="height: 88%;">
+        <nz-layout>
+            <nz-sider nzWidth="100%" nzTheme="light">
+                <ul class="ant-menu ant-menu-root ant-menu-inline side-nav-menu" *ngIf="menuType === 'admin'" nz-menu
+                    nzMode="inline" class="sider-menu" [ngClass]="{
+                'ant-menu-inline-collapsed': isFolded,
+                'ant-menu-dark' : isSideNavDark
+                    }">
+                    <li nz-menu-item routerLink="/dashboard/default">
+                        <span nz-icon nzType="dashboard"></span>
+                        <span>Dashboard</span>
+                    </li>
+                    <li nz-menu-item routerLink="/user/user-grid">
+                        <span nz-icon nzType="user"></span>
+                        <span>User</span>
+                    </li>
+                    <li nz-submenu nzIcon="solution" nzTitle="OAE Test Report">
+                        <ul class="ant-menu ant-menu-inline ant-menu-sub dropdown-menu">
+                            <li class="ant-menu-submenu ant-menu-submenu-inline" nz-menu-item
+                                routerLink="/OAE-Report/OAE-form">
+                                <span nz-icon class="px-2" nzType="reconciliation" nzTheme="outline"></span>
+                                OAE Form
+                            </li>
+                            <li class="ant-menu-submenu ant-menu-submenu-inline" nz-menu-item
+                                routerLink="/OAE-Report/pass-grid">
+                                <span nz-icon class="px-2" nzType="reconciliation" nzTheme="outline"></span>
+                                Pass Report
+                            </li>
+                            <li class="ant-menu-submenu ant-menu-submenu-inline" nz-menu-item
+                                routerLink="/OAE-Report/reffer-grid">
+                                <span nz-icon class="px-2" nzType="reconciliation" nzTheme="outline"></span>
+                                Reffer Report
+                            </li>
+                            <li class="ant-menu-submenu ant-menu-submenu-inline" nz-menu-item
+                                routerLink="/OAE-Report/48-grid">
+                                <span nz-icon class="px-2" nzType="reconciliation" nzTheme="outline"></span>
+                                48 Hours Report
+                            </li>
+                            <li class="ant-menu-submenu ant-menu-submenu-inline" nz-menu-item
+                                routerLink="/OAE-Report/discharge-grid">
+                                <span nz-icon class="px-2" nzType="reconciliation" nzTheme="outline"></span>
+                                Discharge Report
+                            </li>
+                            <li class="ant-menu-submenu ant-menu-submenu-inline" nz-menu-item
+                                routerLink="/OAE-Report/56-week-grid">
+                                <span nz-icon class="px-2" nzType="reconciliation" nzTheme="outline"></span>
+                                56 Week Report
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
 
-                    <!-- Third Level -->
-                    <ul class="ant-menu ant-menu-inline ant-menu-sub dropdown-menu" *ngIf="subItem.submenu.length > 0">
-                        <li [ngClass]="subItem.submenu.length > 0?'ant-menu-submenu ant-menu-submenu-inline':'ant-menu-item'" 
-                            *ngFor="let subItem of subItem.submenu" routerLinkActive="ant-menu-item-selected" 
-                            [routerLinkActiveOptions]="{exact: true}">
-                            <a href="javascript:void(0);" class="ant-menu-submenu-title p-l-50" *ngIf="subItem.submenu.length > 0">
-                                <i *ngIf="subItem.iconType == 'nzIcon'" nz-icon [nzType]="subItem.icon" [theme]="subItem.iconTheme"></i>
-                                <i *ngIf="subItem.iconType == 'fontawesome'" class="m-r-10" [ngClass]="[subItem.iconTheme , subItem.icon]"></i>
-                                <span>{{subItem.title}}</span>
-                                <i class="ant-menu-submenu-arrow"></i>
-                            </a>
-                            <a [routerLink]="subItem.path" (click)="closeMobileMenu()" class="p-l-50" *ngIf="subItem.submenu.length === 0">
-                                <i *ngIf="subItem.iconType == 'nzIcon'" nz-icon [nzType]="subItem.icon" [theme]="subItem.iconTheme"></i>
-                                <i *ngIf="subItem.iconType == 'fontawesome'" class="m-r-10" [ngClass]="[subItem.iconTheme , subItem.icon]"></i>
-                                <span>{{subItem.title}}</span>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </li>
-    </ul>
+                <ul class="ant-menu ant-menu-root ant-menu-inline side-nav-menu" *ngIf="menuType === 'hospital'" nz-menu
+                    nzMode="inline" class="sider-menu" [ngClass]="{
+                'ant-menu-inline-collapsed': isFolded,
+                'ant-menu-dark' : isSideNavDark
+                    }">
+                    <li nz-menu-item routerLink="/dashboard/default">
+                        <span nz-icon nzType="dashboard"></span>
+                        <span>Dashboard</span>
+                    </li>
+                    <!-- <li nz-menu-item routerLink="/user/user-grid">
+                        <span nz-icon nzType="user"></span>
+                        <span>User</span>
+                    </li> -->
+                    <li nz-submenu nzIcon="solution" nzTitle="OAE Test Report">
+                        <ul class="ant-menu ant-menu-inline ant-menu-sub dropdown-menu">
+                            <li class="ant-menu-submenu " nz-menu-item routerLink="/OAE-Report/OAE-form">
+                                <span nz-icon class="px-2" nzType="reconciliation" nzTheme="outline"></span>
+                                OAE Form
+                            </li>
+                            <li class="ant-menu-submenu " nz-menu-item routerLink="/OAE-Report/pass-grid">
+                                <span nz-icon class="px-2" nzType="reconciliation" nzTheme="outline"></span>
+                                Pass Report
+                            </li>
+                            <li class="ant-menu-submenu " nz-menu-item routerLink="/OAE-Report/reffer-grid">
+                                <span nz-icon class="px-2" nzType="reconciliation" nzTheme="outline"></span>
+                                Reffer Report
+                            </li>
+                            <li class="ant-menu-submenu " nz-menu-item routerLink="/OAE-Report/48-grid">
+                                <span nz-icon class="px-2" nzType="reconciliation" nzTheme="outline"></span>
+                                48 Hours Report
+                            </li>
+                            <li class="ant-menu-submenu " nz-menu-item routerLink="/OAE-Report/discharge-grid">
+                                <span nz-icon class="px-2" nzType="reconciliation" nzTheme="outline"></span>
+                                Discharge Report
+                            </li>
+                            <li class="ant-menu-submenu " nz-menu-item routerLink="/OAE-Report/56-week-grid">
+                                <span nz-icon class="px-2" nzType="reconciliation" nzTheme="outline"></span>
+                                56 Week Report
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nz-sider>
 
-    
-</perfect-scrollbar>    
+        </nz-layout>
 
+    </nz-layout>
+</perfect-scrollbar>

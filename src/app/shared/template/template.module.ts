@@ -22,6 +22,7 @@ import { FooterComponent } from "./footer/footer.component";
 
 import { SideNavDirective } from "../directives/side-nav.directive";
 import { ThemeConstantService } from '../services/theme-constant.service';
+import { NzLayoutModule } from 'ng-zorro-antd/layout';
 
 const antdModule = [
     NzAvatarModule,
@@ -33,7 +34,8 @@ const antdModule = [
     NzDividerModule,
     NzSwitchModule,
     NzInputModule,
-    NzButtonModule
+    NzButtonModule,
+    NzLayoutModule
 ]
 
 @NgModule({

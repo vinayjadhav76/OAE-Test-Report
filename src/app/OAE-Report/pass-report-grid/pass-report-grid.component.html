@@ -18,21 +18,29 @@
                             <span nz-icon nzType="search"></span>
                         </nz-filter-trigger> -->
                     </th>
-                    <th>Email</th>
-                    <th>User Type</th>
-                    <th>Action</th>
+                    <th>Father Contact</th>
+                    <th>Baby Birth Date</th>
+                    <th>Status</th>
+                    <th>Baby Gender</th>
+                    <th>Hospital</th>
+                    <th>Test Date</th>
+                    <!-- <th>Action</th> -->
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="">
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td class="d-flex justify-content-around">
+                <tr *ngFor="let report of passReports">
+                    <td>{{report.id}}</td>
+                    <td>{{report.fathername}} {{report.lastname}}</td>
+                    <td>{{report.fathermno}}</td>
+                    <td>{{report.bbdate}}</td>
+                    <td>{{report.satus}}</td>
+                    <td>{{report.bgender}}</td>
+                    <td>{{report.hospital}}</td>
+                    <td>{{report.testdate}}</td>
+                    <!-- <td class="d-flex justify-content-around">
                         <a href=""><span class="text-primary" nz-icon nzType="edit" nzTheme="outline" style="font-size: 20px;" ></span></a>
                         <a  (click)="deleteUser()"><span class="text-danger" nz-icon nzType="delete" nzTheme="outline" style="font-size: 20px;"></span></a>
-                    </td>
+                    </td> -->
                 </tr>
             </tbody>
         </nz-table>

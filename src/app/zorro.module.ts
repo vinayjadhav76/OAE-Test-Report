@@ -10,6 +10,9 @@ import { NzDropDownModule } from 'ng-zorro-antd/dropdown';
 import { NzIconModule } from 'ng-zorro-antd/icon';
 import { NzPaginationModule } from 'ng-zorro-antd/pagination';
 import { NzAlertModule } from 'ng-zorro-antd/alert';
+import { NzLayoutModule } from 'ng-zorro-antd/layout';
+import { NzNotificationModule } from 'ng-zorro-antd/notification';
+
 
 @NgModule({
     exports: [
@@ -23,7 +26,9 @@ import { NzAlertModule } from 'ng-zorro-antd/alert';
         NzDropDownModule,
         NzIconModule,
         NzPaginationModule,
-        NzAlertModule
+        NzAlertModule,
+        NzLayoutModule,
+        NzNotificationModule
     ]
 })
 

@@ -10,7 +10,7 @@ import { zorroModule } from '../zorro.module';
   imports: [
     CommonModule,
     OAEReportRoutingModule,
-    zorroModule
+    zorroModule,
   ]
 })
 export class OAEReportModule { }

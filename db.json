@@ -29,16 +29,53 @@
       "email": "vijay@gmail.com",
       "password": "password",
       "id": 5
+    }
+  ],
+  "report": [
+    {
+      "id": 1,
+      "hospital": "shivaji",
+      "fathername": "dattatray",
+      "lastname": "jadhav",
+      "fathermno": "8108208397",
+      "mothername": "vandana",
+      "mothermno": "8652625284",
+      "email": "dattatray@gmail.com",
+      "bbdate": "1/05/2023",
+      "bgender": "male",
+      "satus": "Pass",
+      "uploadrprt": "parwana.pdf",
+      "testdate": "2/05/2023"
     },
     {
-      "fname": "harsh",
-      "lname": "more",
-      "hospitalname": "siddhivinayak",
-      "userType": "2",
-      "mnumber": "5566889977",
-      "email": "harsh@gmail.com",
-      "password": "password",
-      "id": 6
+      "hospital": "shivaji",
+      "fathername": "a",
+      "lastname": "a",
+      "fathermno": "2",
+      "mothername": "vanadana",
+      "mothermno": "8652625284",
+      "email": "admin@gmail.com",
+      "bbdate": "2023-05-01",
+      "bgender": "Male",
+      "satus": "Reffer",
+      "uploadrprt": "C:\\fakepath\\parwana.pdf",
+      "testdate": "2023-05-02",
+      "id": 2
+    },
+    {
+      "hospital": "shivaji",
+      "fathername": "a",
+      "lastname": "a",
+      "fathermno": "2",
+      "mothername": "v",
+      "mothermno": "3",
+      "email": "ss@gmail.com",
+      "bbdate": "2023-05-01",
+      "bgender": "Male",
+      "satus": "Pass",
+      "uploadrprt": "C:\\fakepath\\parwana.pdf",
+      "testdate": "2023-05-02",
+      "id": 3
     }
   ]
 }

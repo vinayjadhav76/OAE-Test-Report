@@ -1,1 +1,103 @@
-<p>fiftysix-report-add works!</p>
+<div class="container">
+    <nz-card>
+        <form nz-form [formGroup]="fiftySixReport" (ngSubmit)="submitFiftySixForm()">
+            <div class="row">
+                <nz-form-item class="col-md-6">
+                    <nz-form-label [nzSpan]="14" nzRequired nzFor="note">Hospital Name</nz-form-label>
+                    <br>
+                    <nz-form-control>
+                        <input id="hospitalname" type="text" nz-input readonly formControlName="hospitalname" />
+                    </nz-form-control>
+                </nz-form-item>
+                </div>
+                <div class="row">
+                <nz-form-item class="col-md-6">
+                    <nz-form-label [nzSpan]="7" nzRequired nzFor="note">Father's Name</nz-form-label>
+                    <nz-form-control nzErrorTip="Please input father's name!">
+                        <input id="fathername" type="text" nz-input placeholder="Enter Father's Name"
+                            formControlName="fathername" />
+                    </nz-form-control>
+                </nz-form-item>
+                <nz-form-item class="col-md-6">
+                    <nz-form-label [nzSpan]="7" nzRequired nzFor="note">Last Name</nz-form-label>
+                    <nz-form-control nzErrorTip="Please input last name!">
+                        <input id="lastname" type="text" nz-input placeholder="Enter Last Name"
+                            formControlName="lastname" />
+                    </nz-form-control>
+                </nz-form-item>
+                <nz-form-item class="col-md-6">
+                    <nz-form-label [nzSpan]="7" nzRequired nzFor="note">Father's Mobile Number</nz-form-label>
+                    <nz-form-control nzErrorTip="Please input father's mobile number!">
+                        <input id="fathermno" type="text" nz-input placeholder="Enter Father's Mobile Numer"
+                            formControlName="fathermno" />
+                    </nz-form-control>
+                </nz-form-item>
+                <nz-form-item class="col-md-6">
+                    <nz-form-label [nzSpan]="7" nzRequired nzFor="note">Mother's Name</nz-form-label>
+                    <nz-form-control nzErrorTip="Please input mother's name!">
+                        <input id="mothername" type="text" nz-input placeholder="Enter Mother's Name"
+                            formControlName="mothername" />
+                    </nz-form-control>
+                </nz-form-item>
+                <nz-form-item class="col-md-6">
+                    <nz-form-label [nzSpan]="7" nzRequired nzFor="note">Mother's Mobile Number</nz-form-label>
+                    <nz-form-control nzErrorTip="Please input mother's mobile number!">
+                        <input id="mothermno" type="text" nz-input placeholder="Enter Mother's Mobile Numer"
+                            formControlName="mothermno" />
+                    </nz-form-control>
+                </nz-form-item>
+                <nz-form-item class="col-md-6">
+                    <nz-form-label [nzSpan]="7" nzRequired nzFor="email">Email</nz-form-label>
+                    <nz-form-control nzErrorTip="Please input your email!">
+                        <input id="email" type="mail" nz-input placeholder="Enter Email" formControlName="email" />
+                    </nz-form-control>
+                </nz-form-item>
+                <nz-form-item class="col-md-6">
+                    <nz-form-label [nzSpan]="7" nzRequired nzFor="email">Baby's Birth Date</nz-form-label>
+                    <nz-form-control nzErrorTip="Please input baby's birth date!">
+                        <input id="bbdate" type="date" nz-input placeholder="Enter Baby's Birth Date"
+                            formControlName="bbdate" />
+                    </nz-form-control>
+                </nz-form-item>
+                <nz-form-item class="col-md-6">
+                    <nz-form-label [nzSpan]="7" nzFor="userType" nzRequired>Baby's Gender</nz-form-label>
+                    <nz-form-control nzErrorTip="Please select Baby's Gender!">
+                        <nz-select id="bgender" formControlName="bgender" nzPlaceHolder="Select Baby's Gender">
+                            <nz-option nzValue="Male" nzLabel="Male"></nz-option>
+                            <nz-option nzValue="Female" nzLabel="Female"></nz-option>
+                        </nz-select>
+                    </nz-form-control>
+                </nz-form-item>
+                <nz-form-item class="col-md-6">
+                    <nz-form-label [nzSpan]="7" nzFor="userType" nzRequired>Status</nz-form-label>
+                    <nz-form-control nzErrorTip="Please select status">
+                        <nz-select id="satus" formControlName="satus" nzPlaceHolder="Select Status">
+                            <nz-option nzValue="Pass" nzLabel="Pass"></nz-option>
+                            <nz-option nzValue="Reffer" nzLabel="Reffer"></nz-option>
+                        </nz-select>
+                    </nz-form-control>
+                </nz-form-item>
+                <nz-form-item class="col-md-6">
+                    <nz-form-label [nzSpan]="7" nzRequired nzFor="mnumber">Upload Report</nz-form-label>
+                    <nz-form-control nzErrorTip="Please upload report!">
+                        <input id="uploadrprt" type="file" nz-input placeholder="Upload Report"
+                            formControlName="uploadrprt" />
+                    </nz-form-control>
+                </nz-form-item>
+
+                <nz-form-item class="col-md-6">
+                    <nz-form-label [nzSpan]="7" nzRequired nzFor="password">Test Report date</nz-form-label>
+                    <nz-form-control nzErrorTip="Please select test report date!">
+                        <input id="testdate" type="date" nz-input placeholder="Select Test Report Date"
+                            formControlName="testdate" />
+                    </nz-form-control>
+                </nz-form-item>
+                <nz-form-item class="col-md-12 ">
+                    <nz-form-control class="align-items-center">
+                        <button nz-button nzType="primary">Submit</button>
+                    </nz-form-control>
+                </nz-form-item>
+            </div>
+        </form>
+    </nz-card>
+</div>

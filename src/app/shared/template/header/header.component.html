@@ -1,12 +1,12 @@
 <div class="header">
     <div class="logo logo-dark">
-        <a href="">
+        <a href="/dashboard/default">
             <img src="assets/images/logo/logo.png" alt="Logo">
             <img class="logo-fold" src="assets/images/logo/logo-fold.png" alt="Logo">
         </a>
     </div>
     <div class="logo logo-white">
-        <a href="">
+        <a href="/dashboard/default">
             <img src="assets/images/logo/logo-white.png" alt="Logo">
             <img class="logo-fold" src="assets/images/logo/logo-fold-white.png" alt="Logo">
         </a>
@@ -113,7 +113,7 @@
                             </a>
                         </li>
                         <li nz-menu-item>
-                            <a class="p-v-5 d-flex align-items-center justify-content-between">
+                            <a class="p-v-5 d-flex align-items-center justify-content-between" (click)="logOutUser()">
                                 <div>
                                     <i class="opacity-04 font-size-16" nz-icon nzType="logout" theme="outline"></i>
                                     <span class="m-l-10">Logout</span>

@@ -27,6 +27,11 @@ import { RefferReportGridComponent } from './OAE-Report/reffer-report-grid/reffe
 import { FortyEightReportGridComponent } from './OAE-Report/forty-eight-report-grid/forty-eight-report-grid.component';
 import { DischargeReportGridComponent } from './OAE-Report/discharge-report-grid/discharge-report-grid.component';
 import { FiftysixReportGridComponent } from './OAE-Report/fiftysix-report-grid/fiftysix-report-grid.component';
+import { PassReportAddComponent } from './OAE-Report/pass-report-add/pass-report-add.component';
+import { RefferReportAddComponent } from './OAE-Report/reffer-report-add/reffer-report-add.component';
+import { FortyEightReportAddComponent } from './OAE-Report/forty-eight-report-add/forty-eight-report-add.component';
+import { DischargeReportAddComponent } from './OAE-Report/discharge-report-add/discharge-report-add.component';
+import { FiftysixReportAddComponent } from './OAE-Report/fiftysix-report-add/fiftysix-report-add.component';
 
 
 registerLocaleData(en);
@@ -41,7 +46,12 @@ registerLocaleData(en);
         RefferReportGridComponent,
         FortyEightReportGridComponent,
         DischargeReportGridComponent,
-        FiftysixReportGridComponent
+        FiftysixReportGridComponent,
+        PassReportAddComponent,
+        RefferReportAddComponent,
+        FortyEightReportAddComponent,
+        DischargeReportAddComponent,
+        FiftysixReportAddComponent
     ],
     imports: [
         BrowserModule,

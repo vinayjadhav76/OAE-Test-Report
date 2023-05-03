@@ -28,15 +28,15 @@ export class SideNavComponent {
         let userData = localStorage.getItem('User');
         let userInfo = userData && JSON.parse(userData)[0];
         this.userType = userInfo.userType;
-        console.warn(this.userType);
+        // console.warn(this.userType);
 
-        // this.menuType = this.userType
-if(this.userType == 2){
-    this.menuType  = "hospital"
-    console.warn(this.menuType);
-    
-}
-
+        this.menuType = this.userType
+        if (this.userType == "Admin") {
+            this.menuType = "admin"
+            // console.warn(this.menuType);
+        } else if (this.userType == "Hospital") {
+            this.menuType = "hospital"
+        }
     }
 
     closeMobileMenu(): void {
