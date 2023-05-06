@@ -28,8 +28,8 @@
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let report of passReports">
-                    <td>{{report.id}}</td>
+                <tr *ngFor="let report of passReports; let i=index">
+                    <td>{{i+1}}</td>
                     <td>{{report.fathername}} {{report.lastname}}</td>
                     <td>{{report.fathermno}}</td>
                     <td>{{report.bbdate}}</td>

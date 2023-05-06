@@ -1,12 +1,12 @@
 <div class="container">
     <nz-card>
-        <form nz-form [formGroup]="report" (ngSubmit)="submitReport()">
+        <form nz-form [formGroup]="UpdateRefferForm" (ngSubmit)="submitUpdateRefferForm()">
             <div class="row">
                 <nz-form-item class="col-md-6">
                     <nz-form-label [nzSpan]="14" nzRequired nzFor="note">Hospital Name</nz-form-label>
                     <br>
                     <nz-form-control>
-                        <input id="hospitalname"  type="text" nz-input readonly  formControlName="hospital" />
+                        <input id="hospitalname"  type="text" nz-input readonly formControlName="hospital" />
                     </nz-form-control>
                 </nz-form-item>
                 </div>

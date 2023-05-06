@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { ReportService } from 'src/app/shared/services/report.service';
 
@@ -12,7 +12,11 @@ export class ReportFormComponent implements OnInit {
 
   officerHospitalName: string = ''
 
-  constructor(private activerouter: ActivatedRoute, private reportservice: ReportService) { }
+  constructor(
+    private activerouter: ActivatedRoute, 
+    private reportservice: ReportService,
+    private fb:FormBuilder
+    ) { }
 
   ngOnInit(): void {
     let userData = localStorage.getItem('User');
@@ -24,8 +28,8 @@ export class ReportFormComponent implements OnInit {
 
   }
 
-  report = new FormGroup({
-    hospital: new FormControl('shivaji', [Validators.required]),
+  report = this.fb.group({
+    hospital: new FormControl({value:this.officerHospitalName, disabled : true}, [Validators.required]),
     fathername: new FormControl('', [Validators.required]),
     lastname: new FormControl('', [Validators.required]),
     fathermno: new FormControl('', [Validators.required]),

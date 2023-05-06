@@ -24,8 +24,8 @@
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let user of listOfUser">
-                    <td>{{user.id}}</td>
+                <tr *ngFor="let user of listOfUser; let i=index">
+                    <td>{{i+1}}</td>
                     <td>{{ user.fname }}  {{user.lname}}</td>
                     <td>{{ user.email }}</td>
                     <td>{{ user.userType }}</td>

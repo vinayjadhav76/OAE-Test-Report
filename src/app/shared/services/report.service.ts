@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';  
+import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
 
 @Injectable({
@@ -6,21 +6,23 @@ import { HttpClient } from '@angular/common/http'
 })
 export class ReportService {
 
-reportUrl="http://localhost:3000/report";
+  reportUrl = "http://localhost:3000/report";
 
-  constructor( private _http:HttpClient ) { }
+  constructor(private _http: HttpClient) { }
 
-  addReport(data){
-    return this._http.post(this.reportUrl , data)
+  addReport(data) {
+    return this._http.post(this.reportUrl, data)
   }
 
-  listReport(){
+  listReport() {
     return this._http.get("http://localhost:3000/report?satus=Pass")
   }
 
-  listRefferReport(){
+  listRefferReport() {
     return this._http.get("http://localhost:3000/report?satus=Reffer")
   }
 
-
+  getReport(id) {
+    return this._http.get(this.reportUrl + "/" + id)
+  }
 }

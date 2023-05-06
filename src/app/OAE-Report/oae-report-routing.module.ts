@@ -11,6 +11,7 @@ import { DischargeReportGridComponent } from './discharge-report-grid/discharge-
 import { FiftysixReportAddComponent } from './fiftysix-report-add/fiftysix-report-add.component';
 import { FiftysixReportGridComponent } from './fiftysix-report-grid/fiftysix-report-grid.component';
 import { ReportFormComponent } from './report-form/report-form.component';
+import { RefferUpdateComponent } from './reffer-update/reffer-update.component';
 
 const routes: Routes = [
   {
@@ -32,6 +33,10 @@ const routes: Routes = [
   {
     path:'reffer-grid',
     component:RefferReportGridComponent
+  },
+  {
+    path:'reffer-update/:id',
+    component:RefferUpdateComponent
   },
   {
     path:'48-add',
