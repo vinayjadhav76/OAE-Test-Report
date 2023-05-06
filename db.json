@@ -76,6 +76,21 @@
       "uploadrprt": "C:\\fakepath\\parwana.pdf",
       "testdate": "2023-05-02",
       "id": 3
+    },
+    {
+      "hospital": "civil",
+      "fathername": "aksash",
+      "lastname": "patil",
+      "fathermno": "8855226633",
+      "mothername": "sonal",
+      "mothermno": "6655447788",
+      "email": "akash@gmail.com",
+      "bbdate": "2023-05-04",
+      "bgender": "Male",
+      "satus": "Reffer",
+      "uploadrprt": "C:\\fakepath\\parwana.pdf",
+      "testdate": "2023-05-05",
+      "id": 4
     }
   ]
 }

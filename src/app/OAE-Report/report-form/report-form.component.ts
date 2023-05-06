@@ -29,7 +29,7 @@ export class ReportFormComponent implements OnInit {
   }
 
   report = this.fb.group({
-    hospital: new FormControl({value:this.officerHospitalName, disabled : true}, [Validators.required]),
+    hospital: new FormControl('', [Validators.required]),
     fathername: new FormControl('', [Validators.required]),
     lastname: new FormControl('', [Validators.required]),
     fathermno: new FormControl('', [Validators.required]),

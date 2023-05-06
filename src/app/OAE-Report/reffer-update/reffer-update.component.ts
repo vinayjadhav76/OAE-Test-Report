@@ -43,7 +43,7 @@ export class RefferUpdateComponent implements OnInit {
         bbdate: new FormControl(res['bbdate'], [Validators.required]),
         bgender: new FormControl(res['bgender'], [Validators.required]),
         satus: new FormControl(res['satus'], [Validators.required]),
-        // uploadrprt: new FormControl(res['uploadrprt'], [Validators.required]),
+        uploadrprt: new FormControl('', [Validators.required]),
         testdate: new FormControl(res['testdate'], [Validators.required])
       })
      })
